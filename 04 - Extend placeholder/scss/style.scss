@@ -1,0 +1,24 @@
+// @extend: cette directive permet à un sélecteur d'hériter des prop d'un autre sélecteur
+
+// pour définir un placeholder %, selecteur qui ne sera pas compilé en css tant qu'il n'est pas appelé par @extend 
+
+%ext{
+    color:red;
+    font-size:50px;
+    background-color: blue;
+    text-align: center;
+}
+
+
+.banner {
+    h1{
+      @extend %ext;
+
+    }
+}
+
+.footer {
+    h3{
+        @extend %ext;
+    }
+}

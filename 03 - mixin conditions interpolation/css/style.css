@@ -1,0 +1,42 @@
+.banner h1 {
+  font-size: 50px;
+  color: red;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 25px;
+  color: red;
+  text-align: center;
+}
+.footer .box {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-radius 0.5s, background-color 0.5s;
+}
+.footer .box:hover {
+  background-color: green;
+  border-radius: 20px;
+}
+.footer .box .box2 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .box .box2 .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  margin-top: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */

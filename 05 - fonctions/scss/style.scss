@@ -1,0 +1,42 @@
+// Les fonctions nous permettent de faire des opérations sur des prop 
+//  Elle doivent TOUJOURS retourner une valeur
+
+
+// Exemple 1
+@function fontSize($size){
+    @return $size * 2; 
+}
+
+.banner {
+    h1{
+        font-size:fontSize(15px);
+    }
+}
+
+.footer {
+    h3{
+        font-size:fontSize(30px);
+    }
+}
+
+// Exemple 2
+@function size($size){
+    @if($size == lg){
+        @return 400px;
+    }
+    @else if($size == md){
+        @return 300px;
+    }
+    @else if($size == sm){
+        @return 200px;
+    }
+    @else{
+        @return 100px;
+    }
+}
+
+.box{
+    width:size(lg);
+    height:size(md);
+    background-color: red;
+}

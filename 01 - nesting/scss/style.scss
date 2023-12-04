@@ -1,0 +1,36 @@
+// Le nesting: le fait d'imbriquer nos sélecteurs ai lieu de les combiner 
+
+//  css classique 
+// .banner h1{
+//     background-color: red;
+// }
+
+// scss
+
+.banner {
+    h1{
+        background-color: red;
+    }
+    .box{
+        width:200px; 
+        height:200px;
+        background-color: blue;
+        margin: 0 auto; 
+
+        &:active{
+            background-color: red;
+        }
+
+        &::after{
+            content:"";
+            display: block ;
+            width:50px;
+            height:50px;
+            background-color: yellow;
+        }
+
+        &:hover::after{
+            background-color: green;
+        }
+    }
+}

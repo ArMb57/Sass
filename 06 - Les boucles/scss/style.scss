@@ -1,0 +1,44 @@
+$colors: (
+    1:red,
+    2:blue,
+    3:green,
+    4:yellow,
+    5:orange,
+    6:purple,
+    7:gray,
+    8:red,
+    9:white,
+    10:rgb(9, 9, 7)
+);
+
+
+
+//  parcourir une liste d'élement du DOM avec une boucle for
+@for $i from 1 through 10{
+    .item#{$i}{
+        font-size: 20px + $i * 2;
+        animation: color 10s $i*0.4s infinite;
+    }
+}
+
+// parcourir une map avec une boucle for 
+@keyframes color {
+    @for $i from 1 through length($colors){
+        #{$i * 10%}{
+            color: map-get($colors, $i);
+        }
+    }
+}
+
+
+// La boucle @each permet de parcourir une liste ou une map
+// index() permet de récupérer l'index d'un élement d'une liste ou d'une map 
+$types: primary, secondary, tertiary;
+
+@each $toto in $types{
+    .paragraph-#{$toto}{
+        background-color: map-get($colors,index($types, $toto) );
+        font-size: 40px - index($types, $toto) * 5;
+    }
+}
+

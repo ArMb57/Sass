@@ -1,0 +1,55 @@
+// variables avec un sciope global (accessible partout)
+$color-primary: blue;
+$color-secondary: red;
+$color-tertiary: green;
+
+$font-lg: 1.5rem;
+$font-md: 1.2rem;
+$font-sm: 1rem;
+
+.banner{
+    h1{
+        // Définir une variable avec un local scop (accessible uniquement dans le bloc)
+        // global permet de redéfinir une variable globale
+        $color-primary: yellow !global;
+        background-color: $color-primary;
+        font-size: $font-lg;
+    }
+
+    p{
+        background-color: $color-primary;
+    }
+}
+
+// liste, un peu comme des tableaux 
+// liste de valeurs indexéescommencant par 1 
+
+$colors: red, green, blue;
+
+h1{
+    // nth() permet de récupérer la valeur à l'index donné
+    color: nth($colors, 1)
+}
+
+
+// map (tableau associatif)
+
+$colors: (
+    1: red,
+    secondary: green,
+    tertiary: blue
+);
+
+//  Ajouter une valeur à la map
+$colors:map-merge($colors, ('bordure': 1px solid black));
+// Supprimer une valeur à la map
+$colors:map-remove($colors, 1);
+h1{
+    // map-get() permet de récupérer la valeur à l'index donné
+    color: map-get($colors, 1);
+    border: map-get($colors, 'bordure');
+}
+
+// permet de retoruner la valeur d'une variable
+
+@debug map-get($colors, secondary);

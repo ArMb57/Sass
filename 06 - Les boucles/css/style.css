@@ -1,0 +1,98 @@
+.item1 {
+  font-size: 22px;
+  animation: color 10s 0.4s infinite;
+}
+
+.item2 {
+  font-size: 24px;
+  animation: color 10s 0.8s infinite;
+}
+
+.item3 {
+  font-size: 26px;
+  animation: color 10s 1.2s infinite;
+}
+
+.item4 {
+  font-size: 28px;
+  animation: color 10s 1.6s infinite;
+}
+
+.item5 {
+  font-size: 30px;
+  animation: color 10s 2s infinite;
+}
+
+.item6 {
+  font-size: 32px;
+  animation: color 10s 2.4s infinite;
+}
+
+.item7 {
+  font-size: 34px;
+  animation: color 10s 2.8s infinite;
+}
+
+.item8 {
+  font-size: 36px;
+  animation: color 10s 3.2s infinite;
+}
+
+.item9 {
+  font-size: 38px;
+  animation: color 10s 3.6s infinite;
+}
+
+.item10 {
+  font-size: 40px;
+  animation: color 10s 4s infinite;
+}
+
+@keyframes color {
+  10% {
+    color: red;
+  }
+  20% {
+    color: blue;
+  }
+  30% {
+    color: green;
+  }
+  40% {
+    color: yellow;
+  }
+  50% {
+    color: orange;
+  }
+  60% {
+    color: purple;
+  }
+  70% {
+    color: gray;
+  }
+  80% {
+    color: red;
+  }
+  90% {
+    color: white;
+  }
+  100% {
+    color: rgb(9, 9, 7);
+  }
+}
+.paragraph-primary {
+  background-color: red;
+  font-size: 35px;
+}
+
+.paragraph-secondary {
+  background-color: blue;
+  font-size: 30px;
+}
+
+.paragraph-tertiary {
+  background-color: green;
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

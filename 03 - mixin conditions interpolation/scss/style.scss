@@ -1,0 +1,75 @@
+// Les mixins: se sont des groupes de propriétés css qui peuvent être réutilisés 
+//  @ -> directive sass
+$color-primary:red;
+
+// paramètre par défaut
+@mixin textStyle($toto:50px){
+    font-size: $toto;
+    color: $color-primary;
+    text-align: center;
+
+}
+
+//  ... -> permet de passer un nombre indéfini de paramètres
+@mixin transition($param...){
+    transition: $param;
+}
+
+.banner{
+    h1{
+        // Appeler une mixin avec la directive @include
+        @include textStyle();
+       
+    }
+}
+
+
+@mixin create($width:100px, $height:100px, $centerX:false, $centerFlex:false, $prop:background-color , $value:red ){
+    width: $width;
+    height: $height;
+    // Interpolation de variable, rendre une prop dynamique 
+    #{$prop}: $value;
+
+    // @if -> condition 
+    @if($centerX == true){
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @if($centerFlex == true){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.footer{
+    h3{
+        @include textStyle(25px);
+       
+    }
+
+    .box{
+        @include create(400px, 400px, true, true);
+
+        @include transition(border-radius 0.5s, background-color 0.5s);
+
+        &:hover{
+            background-color: green;
+            border-radius: 20px;
+        }
+
+        .box2{
+            @include create(200px, 200px, false, true, background-color, green);
+
+          
+
+            .box3{
+                @include create(100px, 100px,  false, false, background-color, yellow);
+
+                margin-top:12px;
+            }
+         
+    }
+}
+}
