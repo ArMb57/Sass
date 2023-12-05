@@ -1,0 +1,48 @@
+// underscore devant le nom d'un fichier, permer de créer un fichier partial, c'est un type de fichier qui n'est pas compilé 
+
+
+// @import va inclure le contenu( styles, var, mixi ..)  d'un fichier sass dans un autre fichier sass
+// pts négatifs: pas d'encupsulation des style dans des namespace -> peux entrainer la duplication de style ou des conflits de nommage
+// @import "test";
+// @import "mixins";
+// @import "var";
+
+
+// @use rend le contenu dispo dans le fichier sass qui l'importe
+// charge le fichier avec encapsulation dans un espace de nom -> éviter la duplication de style 
+// Charge le fichier 1 seule fois 
+// Utilisation: charger des mixins, des fonctions, etc ...
+// possibilité de donner un alias au fichier importé
+@use "compil";
+
+
+// @forward Permet de re-exorter le contenu d'un fichier, utile pour gérer des collections de styles; créer des pints d'entrées pour les fichiers sass
+
+
+.box{
+    @include compil.new(100px, 100px);
+    @include compil.center(margin);
+    @include compil.center(grid);
+    padding:30px;
+
+    .box2{
+        @include compil.new(20px, 20px, blue);
+       animation: color 10s infinite;
+    }
+
+    @for $i from 1 through 10 {
+           .b#{$i}{
+           animation-delay: $i * 0.4s; 
+           }
+    }
+
+}
+
+
+@keyframes color{
+    @for $i  from 1 through 10{
+        #{$i*10%}{
+            background-color: map-get(compil.$colors, $i);
+        }
+    }
+}

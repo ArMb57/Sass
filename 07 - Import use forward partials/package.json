@@ -1,0 +1,12 @@
+{
+  "name": "07---import-use-forward-partials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch scss:css"  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

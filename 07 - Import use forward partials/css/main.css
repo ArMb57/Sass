@@ -1,0 +1,87 @@
+footer h3 {
+  background-color: red;
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.box .box2 {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  animation: color 10s infinite;
+}
+.box .b1 {
+  animation-delay: 0.4s;
+}
+.box .b2 {
+  animation-delay: 0.8s;
+}
+.box .b3 {
+  animation-delay: 1.2s;
+}
+.box .b4 {
+  animation-delay: 1.6s;
+}
+.box .b5 {
+  animation-delay: 2s;
+}
+.box .b6 {
+  animation-delay: 2.4s;
+}
+.box .b7 {
+  animation-delay: 2.8s;
+}
+.box .b8 {
+  animation-delay: 3.2s;
+}
+.box .b9 {
+  animation-delay: 3.6s;
+}
+.box .b10 {
+  animation-delay: 4s;
+}
+
+@keyframes color {
+  10% {
+    background-color: #f00;
+  }
+  20% {
+    background-color: #0f0;
+  }
+  30% {
+    background-color: #00f;
+  }
+  40% {
+    background-color: #ff0;
+  }
+  50% {
+    background-color: #f0f;
+  }
+  60% {
+    background-color: #0ff;
+  }
+  70% {
+    background-color: #000;
+  }
+  80% {
+    background-color: #fff;
+  }
+  90% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: #999;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
